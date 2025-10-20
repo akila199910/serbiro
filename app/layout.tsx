@@ -26,10 +26,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable } antialiased flex`}
       >
         <Header />
-        {children}
+        <div className="absolute mt-18 w-full">
+          {children}
+        </div>
+        
       </body>
     </html>
   );
