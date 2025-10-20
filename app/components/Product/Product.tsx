@@ -62,14 +62,14 @@ const Product = () => {
   ];
   return (
     <div className=" bg-amber-100 mx-auto px-2 mt-2 pb-2" id="products">
-      <div className="font-bold text-2xl mb-4 text-center">Our Products</div>
+      <div className="font-bold text-2xl mb-4 text-center pt-4">Our Products</div>
 
-      <div className='mb-2'>Lorem ipsum dolor sit amet consectetur
+      <div className='mb-4 mx-64 text-justify'>Lorem ipsum dolor sit amet consectetur
         adipisicing elit. Amet commodi hic eum ea quia nam, corporis
         sapiente laudantium alias explicabo, asperiores repellat assumenda
         officiis beatae voluptas modi, porro quasi omnis.
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-items-center mx-34">
 
         {
           products.map((product) => (

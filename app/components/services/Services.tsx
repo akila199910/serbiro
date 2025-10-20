@@ -62,11 +62,9 @@ const Services = () => {
   ];
   return (
     <div className=" bg-amber-100 mx-auto px-2 mt-2 pb-2" id="products">
-          <div className="font-bold text-2xl mb-4 text-center">Our Services </div>
+          <div className="font-bold text-2xl mb-4 text-center pt-4">Our Services </div>
     
-          <div className='mb-2'>Offering a wide range of print and copy services
-          </div>
-          <div className='mb-2'>Alston is also a trusted name for a 
+          <div className='mb-4 mx-64 text-justify '>Alston is also a trusted name for a 
             wide range of print and copy services in Sri Lanka. From 
             Digital Offset Printing, Photocopying, AutoCAD Plotting, Plan 
             Copying and Blue Printing services to other related services including 
@@ -74,7 +72,7 @@ const Services = () => {
             Designing and Flex Printing, Alston is indeed a one-stop-shop for all your printing
              and copying requirements.
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-items-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 justify-items-center mx-34">
     
             {
               services.map((services) => (
