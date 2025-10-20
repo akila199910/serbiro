@@ -29,7 +29,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable } antialiased flex`}
       >
         <Header />
-        <div className="absolute mt-18 w-full">
+        <div className="w-full mt-15">
           {children}
         </div>
         

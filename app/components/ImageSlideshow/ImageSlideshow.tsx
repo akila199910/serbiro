@@ -39,7 +39,7 @@ const ImageSlideshow = ({ images }: ImageSlideProps) => {
   };
 
   return (
-    <div className="relative w-full max-w-4xl mx-auto h-[400px] my-8">
+    <div className="relative w-full h-screen ">
       {/* Main image container */}
       <div className="relative w-full h-full">
         {images.map((image, index) => (

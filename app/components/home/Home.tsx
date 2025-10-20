@@ -17,11 +17,10 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen ">
-      <div className="container mx-auto px-4">
+    
+      <div className="mx-auto px-2 mt-2 home bg-amber-500 rounded-sm">
         <ImageSlideshow images={images} />
       </div>
-    </div>
   )
 }
 
