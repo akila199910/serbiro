@@ -39,7 +39,7 @@ const ImageSlideshow = ({ images }: ImageSlideProps) => {
   };
 
   return (
-    <div className="relative w-full h-screen ">
+    <div className="relative w-full h-[90vh] ">
       {/* Main image container */}
       <div className="relative w-full h-full">
         {images.map((image, index) => (
@@ -75,7 +75,7 @@ const ImageSlideshow = ({ images }: ImageSlideProps) => {
       </button>
 
       {/* Dots navigation */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex gap-2">
         {images.map((_, index) => (
           <button
             key={index}

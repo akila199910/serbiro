@@ -18,7 +18,8 @@ const Home = () => {
 
   return (
     
-      <div className="mx-auto px-2 mt-2 home bg-amber-500 rounded-sm">
+      // <div className="mx-auto px-2 mt-2 home bg-amber-100 rounded-sm">
+      <div className=" bg-amber-100 mx-auto px-2 mt-2 py-2" id="products">
         <ImageSlideshow images={images} />
       </div>
   )
