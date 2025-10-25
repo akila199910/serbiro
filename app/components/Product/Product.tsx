@@ -1,65 +1,10 @@
 import Image from 'next/image'
 import React from 'react'
-import img1 from '../home/OIP.webp'
+import Link from 'next/link';
+import products from '../../data/product'
 
 const Product = () => {
-  const products = [
-    {
-      id: 1,
-      name: 'Product 1',
-      description: 'Description of Product 1.',
-      image: img1,
-    },
-    {
-      id: 2,
-      name: 'Product 2',
-      description: 'Description of Product 1.',
-      image: img1,
-    },
-    {
-      id: 3,
-      name: 'Product 3',
-      description: 'Description of Product 1.',
-      image: img1,
-    },
-    {
-      id: 4,
-      name: 'Product 4',
-      description: 'Description of Product 1.',
-      image: img1,
-    },
-    {
-      id: 5,
-      name: 'Product 5',
-      description: 'Description of Product 1.',
-      image: img1,
-    },
-    {
-      id: 6,
-      name: 'Product 6',
-      description: 'Description of Product 1.',
-      image: img1,
-    },
-    {
-      id: 7,
-      name: 'Product 7',
-      description: 'Description of Product 1.',
-      image: img1,
-    },
-    {
-      id: 8,
-      name: 'Product 8',
-      description: 'Description of Product 1.',
-      image: img1,
-    },
-    {
-      id: 9,
-      name: 'Product 9',
-      description: 'Description of Product 1.',
-      image: img1,
-    },
-    // Add more products as needed
-  ];
+  
   return (
     <div className=" bg-amber-100 mx-auto px-2 mt-2 pb-2" id="products">
       <div className="font-bold text-2xl mb-4 text-center pt-4">Our Products</div>
@@ -85,7 +30,7 @@ const Product = () => {
       </div>
       <div className='text-lg font-bold text-center 
             bg-blue-400 p-2 justify-center flex w-40 mx-auto mt-4 rounded-lg text-white hover:bg-blue-600'>
-        <button className='cursor-pointer'>See More</button>
+        <Link href={'/products'} className='cursor-pointer'>See More</Link>
       </div>
 
     </div>
