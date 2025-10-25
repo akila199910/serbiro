@@ -1,4 +1,5 @@
 "use client"
+import Link from 'next/link';
 import React, { JSX, useState } from 'react'
 
 const Header = (): JSX.Element => {
@@ -16,19 +17,19 @@ const Header = (): JSX.Element => {
             <div className='hidden sm:block'>
                 <ul className='flex items-center gap-[4vw] font-medium cursor-pointer'>
                     <li>
-                        <p className='hover:text-gray-500 home' >Home</p>
+                        <Link href={'/'} className='hover:text-gray-500 home'>Home</Link>
                     </li>
                     <li>
-                        <p className='hover:text-gray-500 products'>Products</p>
+                        <Link href={'/products'} className='hover:text-gray-500 home'>Products</Link>
                     </li>
                     <li>
-                        <p className='hover:text-gray-500 services' >Services</p>
+                        <Link href={'/services'} className='hover:text-gray-500 home'>Services</Link>
                     </li>
                     <li>
-                        <p className='hover:text-gray-500 about' >About Us</p>
+                        <Link href={'/about'} className='hover:text-gray-500 home'>About Us</Link>
                     </li>
                     <li>
-                        <p className='hover:text-gray-500 location'>Locations</p>
+                        <Link href={'/locations'} className='hover:text-gray-500 home'>Locations</Link>
                     </li>
                 </ul>
             </div>
@@ -39,19 +40,19 @@ const Header = (): JSX.Element => {
         <div className={` ${isMenuOpen ? 'block':'hidden'} block sm:hidden `}>
             <ul className='flex flex-col items-center gap-[4vw] font-medium cursor-pointer'>
                     <li>
-                        <p className='hover:text-gray-500 home' >Home</p>
+                        <Link href={'/'} className='hover:text-gray-500 home'>Home</Link>
                     </li>
                     <li>
-                        <p className='hover:text-gray-500 products' >Products</p>
+                        <Link href={'/products'} className='hover:text-gray-500 home'>Products</Link>
                     </li>
                     <li>
-                        <p className='hover:text-gray-500 services' >Services</p>
+                        <Link href={'/services'} className='hover:text-gray-500 home'>Services</Link>
                     </li>
                     <li>
-                        <p className='hover:text-gray-500 about' >About Us</p>
+                        <Link href={'/about'} className='hover:text-gray-500 home'>About Us</Link>
                     </li>
                     <li>
-                        <p className='hover:text-gray-500 location' >Locations</p>
+                        <Link href={'/locations'} className='hover:text-gray-500 home'>Locations</Link>
                     </li>
                 </ul>
         </div>
