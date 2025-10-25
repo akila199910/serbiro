@@ -73,7 +73,8 @@ const Product = () => {
 
         {
           products.map((product) => (
-            <div key={product.id} className="bg-white p-4 rounded shadow cursor-pointer hover:scale-110 transform transition duration-300" title={product.name}>
+            <div key={product.id} className="bg-white p-4 rounded shadow 
+            cursor-pointer hover:scale-110 transform transition duration-300" title={product.name}>
               <h3 className="font-semibold text-lg mb-2">{product.name}</h3>
               <p className="text-gray-700">{product.description}</p>
               <Image src={product.image} alt={product.name} width={300} height={200} />
