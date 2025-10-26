@@ -1,9 +1,10 @@
-'use client'
 import React from 'react'
 import Image from 'next/image'
 import products from '@/app/data/product'
+import Link from 'next/link'
 
-const ProductsPage = () => {
+const ProductsPageCategory = async () => {
+
   return (
     <div className="w-full">
       {/* Hero Section */}
@@ -23,31 +24,33 @@ const ProductsPage = () => {
         <section className="mb-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product) => (
-              <div 
-                key={product.id} 
-                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-              >
-                <div className="relative h-48 w-full">
-                  <Image 
-                    src={product.image} 
-                    alt={product.name}
-                    fill
-                    className="object-cover"
-                  />
+              <Link key={product.id} href={`products/${product.id}`}>
+                <div
+                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                >
+                  <div className="relative h-48 w-full">
+                    <Image
+                      src={product.image}
+                      alt={product.cName}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold mb-2">{product.cName}</h3>
+                    <p className="text-gray-600">{product.cDescription}</p>
+
+                    {/* Add any additional product details here */}
+                  </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">{product.name}</h3>
-                  <p className="text-gray-600">{product.description}</p>
-                  
-                  {/* Add any additional product details here */}
-                </div>
-              </div>
+              </Link>
+
             ))}
           </div>
         </section>
 
         {/* Call to Action */}
-        <section className="text-center">
+        {/* <section className="text-center">
           <div className="bg-amber-50 rounded-lg p-8">
             <h2 className="text-2xl font-bold mb-4">Need Custom Solutions?</h2>
             <p className="text-gray-600 mb-6">
@@ -57,10 +60,10 @@ const ProductsPage = () => {
               Contact Us
             </button>
           </div>
-        </section>
+        </section> */}
       </div>
     </div>
   )
 }
 
-export default ProductsPage
+export default ProductsPageCategory

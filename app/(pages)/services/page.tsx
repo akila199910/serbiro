@@ -23,7 +23,7 @@ const Services = () => {
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="flex flex-col md:flex-row gap-8">
           {/* Service Navigation - Desktop */}
-          <nav className="md:w-1/4">
+          <nav className="md:w-1/4 shadow-xl/30 p-2">
             <ul className="hidden md:flex flex-col space-y-2 sticky top-4">
               {services.map((s) => (
                 <li
@@ -55,7 +55,7 @@ const Services = () => {
           </nav>
 
           {/* Service Content */}
-          <div className="md:w-3/4">
+          <div className="md:w-3/4 shadow-xl/30">
             <div className="bg-white rounded-lg p-6 shadow-sm">
               <h2 className="text-3xl font-bold mb-6 text-gray-800">
                 {selectedService?.name}
