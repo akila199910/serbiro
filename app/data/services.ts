@@ -1,5 +1,13 @@
 import { StaticImageData } from 'next/image';
 import img1 from '../components/home/OIP.webp'
+import digital from '../(pages)/services/alston-inner-page-banner-digital-offset.jpg'
+import pcopy from '../(pages)/services/alston-inner-page-banner.jpg'
+import plot from '../(pages)/services/alston-inner-page-banner-autocad-plotting.jpg'
+import plan from '../(pages)/services/plan-copying-blue-printing.jpg'
+import computer from '../(pages)/services/inner-page-banner_07 (1).jpg'
+import binding from '../(pages)/services/OUR_SERVICES_default_inner_page_header-1.jpg'
+
+
 
 type service = {
     id : number,
@@ -9,6 +17,7 @@ type service = {
     subDescription:string,
     image : StaticImageData,
     helps:string[],
+    coverImage:StaticImageData,
 }
 const services :service[] = [
     {
@@ -21,7 +30,8 @@ const services :service[] = [
       helps:['Business Cards','Letter Heads','Certificates',
         'Invitation Cards','Leaflets, Brochures, Flyers',
         'Stickers','Posters and Notices','CD/DVD Covers and Labels','Annual and Project reports'
-    ]
+    ],
+    coverImage:digital
     },
 
     {
@@ -33,7 +43,8 @@ const services :service[] = [
       image: img1,
       helps:['High Speed Photocopying','High Quality Colour and Black Copying','Best Paper and Massive stocks for rush jobs',
         'Well-trained staff','Same-day Service, Bulk Photocopying'
-    ]
+    ],
+    coverImage:pcopy
     },
     {
       id: 3,
@@ -46,7 +57,8 @@ const services :service[] = [
         'Digitally Print from DWG, DWF, PDF, JPEF and TIFF formats',
         'Colour and Black & White scanning of the originals',
         'Enlargements and Reductions to any size'
-    ]
+    ],
+    coverImage:plot
     },
     {
       id: 5,
@@ -60,7 +72,8 @@ const services :service[] = [
         'Fast and Reliable Service',
         'Enlargements and Reductions can be made to suit your requirements.',
         'Blue Printing',
-    ]
+    ],
+    coverImage:plan
     },
     {
       id: 6,
@@ -69,7 +82,8 @@ const services :service[] = [
       subDescription:'',
       description: 'If you are running out of storage space with thousands of old documents and drawings, we can digitally scan them and turn them into secure, compact digital file for archiving on CD, DVD or an USB drive. At Alston Stationery, we have large format colour and Black & White Scanners to scan 2A0, A0, A1, A2, A3, A4 sized plans, drawings, maps to PDF, TIFF or JPEG file formats.',
       image: img1,
-      helps:[]
+      helps:[],
+      coverImage:computer
     },
     {
       id: 7,
@@ -78,7 +92,8 @@ const services :service[] = [
       subDescription:'',
       description: 'Protect your vital documents for a lifetime with our high-quality laminating services. Lamination also gives your documents a professional and quality look. At Alston Stationery, we laminate A3 or A4 documents, photographs in our pouch laminator and smaller documents including leaflets, ID Cards etc. With our special roll laminator, we can laminate your posters, maps and drawings in gloss or matt formats to any length up to 1 meter wide.',
       image: img1,
-      helps:[]
+      helps:[],
+      coverImage:computer
     },
     {
       id: 8,
@@ -89,7 +104,8 @@ const services :service[] = [
       image: img1,
       helps:['Spiral Binding','Wire Binding','Velo Binding',
         'Coil Binding','Tape Binding',
-    ]
+    ],
+    coverImage:binding
     },
     {
       id: 9,
@@ -100,7 +116,8 @@ const services :service[] = [
       image: img1,
       helps:['Polymer(Rubber) Stamps','Self-inked Stamps','Pre-inked Stamps',
         'Embossing Seals',
-    ]
+    ],
+    coverImage:computer
     },
     {
       id: 10,
@@ -109,7 +126,8 @@ const services :service[] = [
       subDescription:'',
       description: 'We specialise in printing high-quality plastic cards including company ID, Membership cards, Gift Cards, at competitive rates for your company, association, small business or individual requirement. We provide full Colour printed plastic cards and all related accessories required such as plastic card holders, covers and coloured lanyards/neck cords.',
       image: img1,
-      helps:[]
+      helps:[],
+      coverImage:computer
     },
     {
       id: 11,
@@ -119,7 +137,8 @@ const services :service[] = [
       description: 'Looking for reliable and high-quality flex printing in Sri Lanka? Alston Stationery offers fast, high quality flex printing for banners, hoardings, signboards and event backdrops.',
       image: img1,
       helps:['X Banner Printing','Pull-up Banner Printing','Banner and hoarding flex printing','Backdrop printing'
-    ]
+    ],
+    coverImage:computer
     },
     {
       id: 12,
@@ -131,7 +150,9 @@ const services :service[] = [
       helps:['Folding','Stapling','Punching',
         'Filing','Guillotining, Brochures, Flyers',
         'Stickers','Collating and Sorting'
-    ]
+    ],
+    coverImage:computer
+
     },
     {
       id: 13,
@@ -140,7 +161,8 @@ const services :service[] = [
       subDescription:'',
       description: 'Our skilled and experienced designers will assist you in developing any artwork, design, book cover, packaging and so much more. All you need to do is to brief us on your concept, your requirement and if possible your theme colours, and we will present you with a really impressive artwork to attract the attention of your target market.',
       image: img1,
-      helps:[]
+      helps:[],
+      coverImage:computer
     },
     {
       id: 14,
@@ -152,7 +174,9 @@ const services :service[] = [
       helps:['CD/DVD Duplication','Artwork Designing and Editing','Typesetting',
         'Internet and Email','Fax Service',
         'Email Print Facility','Stationery'
-    ]
+    ],
+    coverImage:computer
+
     },
     // Add more products as needed
   ];

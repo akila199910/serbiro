@@ -1,6 +1,5 @@
 "use client"
 import React, { useState } from 'react'
-import serviceImg from './alston-inner-page-banner-digital-offset.jpg'
 import Image from 'next/image'
 import services from '@/app/data/services'
 
@@ -11,7 +10,7 @@ const Services = () => {
   return (
     <div className='w-full flex flex-col gap-4'>
       <div className='w-full'>
-        <Image src={serviceImg} alt='serviceImg' />
+        <Image src={selectedService.coverImage} alt='serviceImg' />
       </div>
 
       <div className='flex w-full gap-6'>
