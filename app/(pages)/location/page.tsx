@@ -141,7 +141,7 @@ const LocationPage = () => {
             </div>
 
             {/* Directions */}
-            <div className="bg-gray-50 p-6 rounded-lg">
+            {/* <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-xl font-bold mb-4">Getting Here</h3>
               <div className="space-y-3">
                 <p className="text-gray-600">
@@ -154,7 +154,7 @@ const LocationPage = () => {
                   <span className="font-semibold">Parking:</span> Free customer parking available at our premises.
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
