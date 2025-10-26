@@ -1,6 +1,8 @@
 "use client"
+import Image from 'next/image';
 import Link from 'next/link';
 import React, { JSX, useState } from 'react'
+import menuI from './image_processing20210616-28547-4dos3y.png'
 
 const Header = (): JSX.Element => {
 
@@ -14,7 +16,11 @@ const Header = (): JSX.Element => {
             </div>
 
             {/* this is nav link for desktop/Tab */}
-            <div className='hidden sm:block'>
+            <div className='hidden sm:flex sm:flex-col gap-2'>
+                <div className='flex  justify-end gap-3'>
+                    <div className='uppercase font-medium'> 📞 Hotline </div>
+                    <div>0452230584</div>
+                </div>
                 <ul className='flex items-center gap-[4vw] font-medium cursor-pointer'>
                     <li>
                         <Link href={'/'} className='hover:text-gray-500 home'>Home</Link>
@@ -34,11 +40,11 @@ const Header = (): JSX.Element => {
                 </ul>
             </div>
             <div className=' block sm:hidden ' onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                <button>Bu</button>
+                <button><Image src={menuI} alt='menu' className='w-5 pt-2'/></button>
             </div>
         </nav>
         <div className={` ${isMenuOpen ? 'block':'hidden'} block sm:hidden `}>
-            <ul className='flex flex-col items-center gap-[4vw] font-medium cursor-pointer'>
+            <ul className='flex flex-col items-center gap-[4vw] font-medium cursor-pointer' onClick={() => setIsMenuOpen(!isMenuOpen)}>
                     <li>
                         <Link href={'/'} className='hover:text-gray-500 home'>Home</Link>
                     </li>
