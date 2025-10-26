@@ -51,7 +51,7 @@ const ProductsPage = () => {
           <div className="bg-amber-50 rounded-lg p-8">
             <h2 className="text-2xl font-bold mb-4">Need Custom Solutions?</h2>
             <p className="text-gray-600 mb-6">
-              Contact us to discuss your specific requirements. We're here to help you find the perfect solution.
+              Contact us to discuss your specific requirements. {"We're great"} here to help you find the perfect solution.
             </p>
             <button className="bg-amber-600 text-white px-8 py-3 rounded-lg hover:bg-amber-700 transition-colors">
               Contact Us
