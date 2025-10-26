@@ -7,7 +7,7 @@ const ProductsPage = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <div className="relative h-[300px] md:h-[400px] w-full bg-gradient-to-r from-amber-500 to-amber-700">
+      <div className="relative h-[300px] md:h-[400px] w-full bg-gradient-to-r from-blue-600 to-blue-800">
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 h-full flex flex-col justify-center items-center text-white px-4">
           <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">Our Products</h1>
