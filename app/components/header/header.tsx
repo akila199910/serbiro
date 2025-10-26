@@ -35,7 +35,7 @@ const Header = (): JSX.Element => {
                         <Link href={'/about'} className='hover:text-gray-500 home'>About Us</Link>
                     </li>
                     <li>
-                        <Link href={'/locations'} className='hover:text-gray-500 home'>Locations</Link>
+                        <Link href={'/location'} className='hover:text-gray-500 home'>Locations</Link>
                     </li>
                 </ul>
             </div>
@@ -58,7 +58,7 @@ const Header = (): JSX.Element => {
                         <Link href={'/about'} className='hover:text-gray-500 home'>About Us</Link>
                     </li>
                     <li>
-                        <Link href={'/locations'} className='hover:text-gray-500 home'>Locations</Link>
+                        <Link href={'/location'} className='hover:text-gray-500 home'>Locations</Link>
                     </li>
                 </ul>
         </div>
