@@ -11,10 +11,10 @@ export default function HomePage() {
       <section className="relative h-[85vh] bg-gradient-to-r from-blue-600 to-blue-800">
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 h-full flex flex-col justify-center items-center text-white px-4">
-          <h1 className="text-4xl md:text-6xl font-bold text-center mb-6">
+          <h1 className="text-2xl md:text-6xl font-bold text-center mb-6 mt-3 sm:mt-0">
             Welcome to Sebiro Technologies
           </h1>
-          <p className="text-xl md:text-2xl text-center max-w-2xl mb-8">
+          <p className="text-sm md:text-2xl text-center max-w-2xl mb-8">
             Your One-Stop Solution for Digital Printing and Technology Services
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
@@ -31,6 +31,16 @@ export default function HomePage() {
               View Products
             </Link>
           </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 mt-2 ">
+            <Link 
+              href="/dealers" 
+              className=" bg-yellow-400 text-2xl uppercase text-center text-black px-15 py-2 rounded-lg font-extrabold hover:bg-yellow-200 transition-colors"
+            >
+              Join As A Dealer
+            </Link>
+          </div>
+
         </div>
       </section>
 

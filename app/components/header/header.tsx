@@ -9,56 +9,70 @@ const Header = (): JSX.Element => {
     const [isMenuOpen, setIsMenuOpen] =useState<boolean>(false);
 
   return (
-    <header className='bg-gray-300 pb-2 fixed w-full top-0 z-50'>
-        <nav className='flex justify-between w-[90vw] mx-auto py-2 items-center'>
-            <div className='item-center'>
-                Sebiro Technologies
+    <header className='bg-white shadow-md pb-2 fixed w-full top-0 z-50'>
+        <nav className='flex justify-between w-[90vw] mx-auto py-4 items-center'>
+            <div className='flex items-center'>
+                <Link href="/" className='text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors'>
+                    Sebiro Technologies
+                </Link>
             </div>
 
-            {/* this is nav link for desktop/Tab */}
+            {/* Desktop/Tablet Navigation */}
             <div className='hidden sm:flex sm:flex-col gap-2'>
-                <div className='flex  justify-end gap-3'>
-                    <div className='uppercase font-medium'> 📞 Hotline </div>
-                    <div>0452230584</div>
+                <div className='flex justify-end gap-3 text-gray-600'>
+                    <div className='uppercase font-medium flex items-center'>
+                        <span className='text-blue-500 mr-2'>📞</span> Hotline
+                    </div>
+                    <div className='font-semibold hover:text-blue-600 transition-colors'>
+                        <a href="tel:0452230584">0452230584</a>
+                    </div>
                 </div>
-                <ul className='flex items-center gap-[4vw] font-medium cursor-pointer'>
+                <ul className='flex items-center gap-[3vw] font-medium cursor-pointer'>
                     <li>
-                        <Link href={'/'} className='hover:text-gray-500 home'>Home</Link>
+                        <Link href={'/'} className='hover:text-blue-600 transition-colors'>Home</Link>
                     </li>
                     <li>
-                        <Link href={'/products'} className='hover:text-gray-500 home'>Products</Link>
+                        <Link href={'/products'} className='hover:text-blue-600 transition-colors'>Products</Link>
                     </li>
                     <li>
-                        <Link href={'/services'} className='hover:text-gray-500 home'>Services</Link>
+                        <Link href={'/services'} className='hover:text-blue-600 transition-colors'>Services</Link>
                     </li>
                     <li>
-                        <Link href={'/about'} className='hover:text-gray-500 home'>About Us</Link>
+                        <Link href={'/about'} className='hover:text-blue-600 transition-colors'>About Us</Link>
                     </li>
                     <li>
-                        <Link href={'/location'} className='hover:text-gray-500 home'>Locations</Link>
+                        <Link href={'/location'} className='hover:text-blue-600 transition-colors'>Locations</Link>
+                    </li>
+                    <li>
+                        <Link href={'/dealers'} className='bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full transition-colors'>Join as a Dealer</Link>
                     </li>
                 </ul>
             </div>
-            <div className=' block sm:hidden ' onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                <button><Image src={menuI} alt='menu' className='w-5 pt-2'/></button>
+            <div className='block sm:hidden' onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                <button className='p-2 hover:bg-gray-100 rounded-lg transition-colors'>
+                    <Image src={menuI} alt='menu' className='w-6 h-6'/>
+                </button>
             </div>
         </nav>
-        <div className={` ${isMenuOpen ? 'block':'hidden'} block sm:hidden `}>
-            <ul className='flex flex-col items-center gap-[4vw] font-medium cursor-pointer' onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <div className={`${isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'} block sm:hidden transition-all duration-300 ease-in-out overflow-hidden bg-white`}>
+            <ul className='flex flex-col items-center gap-6 py-4 font-medium' onClick={() => setIsMenuOpen(!isMenuOpen)}>
                     <li>
-                        <Link href={'/'} className='hover:text-gray-500 home'>Home</Link>
+                        <Link href={'/'} className='hover:text-blue-600 transition-colors'>Home</Link>
                     </li>
                     <li>
-                        <Link href={'/products'} className='hover:text-gray-500 home'>Products</Link>
+                        <Link href={'/products'} className='hover:text-blue-600 transition-colors'>Products</Link>
                     </li>
                     <li>
-                        <Link href={'/services'} className='hover:text-gray-500 home'>Services</Link>
+                        <Link href={'/services'} className='hover:text-blue-600 transition-colors'>Services</Link>
                     </li>
                     <li>
-                        <Link href={'/about'} className='hover:text-gray-500 home'>About Us</Link>
+                        <Link href={'/about'} className='hover:text-blue-600 transition-colors'>About Us</Link>
                     </li>
                     <li>
-                        <Link href={'/location'} className='hover:text-gray-500 home'>Locations</Link>
+                        <Link href={'/location'} className='hover:text-blue-600 transition-colors'>Locations</Link>
+                    </li>
+                    <li>
+                        <Link href={'/dealers'} className='bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full transition-colors'>Join as a Dealer</Link>
                     </li>
                 </ul>
         </div>
