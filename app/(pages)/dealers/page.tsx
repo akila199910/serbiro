@@ -158,13 +158,12 @@ const DealerPage = () => {
             <div className="bg-blue-50 p-6 rounded-lg">
               <h3 className="text-2xl font-bold mb-4 text-blue-800">Products & Services Included</h3>
               <p className="text-black">
-                {/* Get special pricing on our full range of services and products,
+                Get special pricing on our full range of services and products,
                 including:(Group 1: Print Services) Digital Printing (Full Colour & B/W)
                 Flex Printing Large Format Banners & Posters Laminating Services
-                (Add any other services, like 'Sticker Printing', 'Binding', 'Business Cards', etc.)
+                (Add any other services, like Sticker Printing, Binding, Business Cards, etc.)
                 (Group 2: Office Equipment & Supplies) Printers Scanners Toners & Cartridges Inks
-                (Add any other products, like 'A4 Paper Reams', 'Staplers', etc.) */}
-
+                (Add any other products, like A4 Paper Reams, Staplers, etc.)
               </p>
             </div>
           </div>
