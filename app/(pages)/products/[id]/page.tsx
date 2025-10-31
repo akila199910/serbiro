@@ -104,7 +104,7 @@ const ProductsPage = ({
               Contact us to discuss your specific requirements. {` We're `} here to help you find the perfect solution.
             </p>
             <Link 
-              href="/contact" 
+              href="/about" 
               className="inline-block bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-colors"
             >
               Contact Us
