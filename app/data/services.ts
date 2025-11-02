@@ -35,6 +35,42 @@ const services :service[] = [
     },
 
     {
+      id: 15,
+      name: 'Color Printing',
+      title:'Title one',
+      description: 'Colour and Black & White Photocopying might sound pretty basic, but with years of experience in the industry and modern high-speed equipment, Alston Stationery is able to provide you with some of the best Photocopying Services in Sri Lanka. Our ultra-modern machines can copy single and double sides, collate and even staple if required.',
+      subDescription:'We specialise in bulk photocopying and whatever the size of your photocopying requirement may be, Alston Stationery offers a fast, efficient and cost-effecting service.',
+      image: img1,
+      helps:['High Speed Photocopying','High Quality Colour and Black Copying','Best Paper and Massive stocks for rush jobs',
+        'Well-trained staff','Same-day Service, Bulk Photocopying'
+    ],
+    coverImage:pcopy
+    },
+    {
+      id: 16,
+      name: 'Laser Printing',
+      title:'Title one',
+      description: 'Colour and Black & White Photocopying might sound pretty basic, but with years of experience in the industry and modern high-speed equipment, Alston Stationery is able to provide you with some of the best Photocopying Services in Sri Lanka. Our ultra-modern machines can copy single and double sides, collate and even staple if required.',
+      subDescription:'We specialise in bulk photocopying and whatever the size of your photocopying requirement may be, Alston Stationery offers a fast, efficient and cost-effecting service.',
+      image: img1,
+      helps:['High Speed Photocopying','High Quality Colour and Black Copying','Best Paper and Massive stocks for rush jobs',
+        'Well-trained staff','Same-day Service, Bulk Photocopying'
+    ],
+    coverImage:pcopy
+    },
+    {
+      id: 17,
+      name: 'Hard Binding',
+      title:'Title one',
+      description: 'Colour and Black & White Photocopying might sound pretty basic, but with years of experience in the industry and modern high-speed equipment, Alston Stationery is able to provide you with some of the best Photocopying Services in Sri Lanka. Our ultra-modern machines can copy single and double sides, collate and even staple if required.',
+      subDescription:'We specialise in bulk photocopying and whatever the size of your photocopying requirement may be, Alston Stationery offers a fast, efficient and cost-effecting service.',
+      image: img1,
+      helps:['High Speed Photocopying','High Quality Colour and Black Copying','Best Paper and Massive stocks for rush jobs',
+        'Well-trained staff','Same-day Service, Bulk Photocopying'
+    ],
+    coverImage:pcopy
+    },
+    {
       id: 2,
       name: 'Photocopying',
       title:'Title one',

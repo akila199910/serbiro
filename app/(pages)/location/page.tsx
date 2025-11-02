@@ -35,8 +35,8 @@ const LocationPage = () => {
                   <div>
                     <h3 className="font-semibold text-lg">Address</h3>
                     <p className="text-gray-600">
-                      123 Business Street<br />
-                      Colombo 03<br />
+                      No: 25/1 Dharmapala Mawatha<br />
+                      Rathnapura<br />
                       Sri Lanka
                     </p>
                   </div>
@@ -50,7 +50,7 @@ const LocationPage = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg">Phone</h3>
-                    <p className="text-gray-600">Main: +94 11 234 5678</p>
+                    <p className="text-gray-600">Hotline: +94 70 444 0078</p>
                     <p className="text-gray-600">Support: +94 11 234 5679</p>
                   </div>
                 </div>
