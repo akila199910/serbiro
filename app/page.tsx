@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import services from './data/services';
 import products from './data/product';
+import ImageSlideshow from './components/ImageSlideshow/ImageSlideshow';
 export default function HomePage() {
   return (
     <div className="min-h-screen">
@@ -41,6 +42,13 @@ export default function HomePage() {
             </Link>
           </div>
 
+        </div>
+      </section>
+
+
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+         <ImageSlideshow/>
         </div>
       </section>
 

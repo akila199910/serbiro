@@ -1,93 +1,94 @@
 "use client"
-import { useState, useEffect } from 'react';
-import Image from 'next/image';
+import Image, { type StaticImageData } from 'next/image'
+import React, { useEffect, useState } from 'react'
+import NoImg from '../home/inner-page-banner_07.jpg'
 
-import { StaticImageData } from 'next/image';
-
-interface ImageSlideProps {
-  images: { src: StaticImageData | string; alt: string }[];
+type Slide = {
+  src: StaticImageData | string
+  alt?: string
 }
 
-const ImageSlideshow = ({ images }: ImageSlideProps) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+type Props = {
+  images?: Slide[]
+  autoPlay?: boolean
+  interval?: number
+}
+
+const ImageSlideshow: React.FC<Props> = ({ images, autoPlay = true, interval = 3000 }) => {
+  // fallback images if none provided
+  const slides: Slide[] = images && images.length > 0 ? images : [
+    { src: NoImg, alt: 'Slide 1' },
+    { src: NoImg, alt: 'Slide 2' },
+    { src: NoImg, alt: 'Slide 3' }
+  ]
+
+  const [current, setCurrent] = useState(0)
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) => 
-        prevIndex === images.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 3000); 
+    if (!autoPlay) return
+    const id = setInterval(() => {
+      setCurrent(prev => (prev + 1) % slides.length)
+    }, interval)
+    return () => clearInterval(id)
+  }, [autoPlay, interval, slides.length])
 
-    return () => clearInterval(timer);
-  }, [images.length]);
-
-  
-  const goToSlide = (index: number) => {
-    setCurrentIndex(index);
-  };
-
-  const goToNext = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  const goToPrevious = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
-  };
+  const prev = () => setCurrent(prev => (prev - 1 + slides.length) % slides.length)
+  const next = () => setCurrent(prev => (prev + 1) % slides.length)
 
   return (
-    <div className="relative w-full h-[90vh] ">
-      {/* Main image container */}
-      <div className="relative w-full h-full">
-        {images.map((image, index) => (
+    <div id="default-carousel" className="relative w-full" data-carousel="slide">
+      <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
+        {slides.map((s, i) => (
           <div
-            key={index}
-            className={`absolute w-full h-full transition-opacity duration-500 ${
-              index === currentIndex ? 'opacity-100' : 'opacity-0'
-            }`}
+            key={i}
+            className={`${i === current ? 'block h-full' : 'hidden h-full'}`}
+            data-carousel-item
+            aria-hidden={i !== current}
           >
-            <Image
-              src={image.src}
-              alt={image.alt}
-              fill
-              className="object-contain"
-              priority={index === 0}
-            />
+            <div className="relative w-full h-full">
+              <Image src={s.src} alt={s.alt || `slide ${i + 1}`} fill className="object-cover" priority={i === 0} />
+            </div>
           </div>
         ))}
       </div>
 
-      {/* Navigation arrows */}
-      <button
-        onClick={goToPrevious}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/75"
-      >
-        ←
-      </button>
-      <button
-        onClick={goToNext}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/75"
-      >
-        →
-      </button>
-
-      {/* Dots navigation */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex gap-2">
-        {images.map((_, index) => (
+      {/* indicators */}
+      <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3">
+        {slides.map((_, i) => (
           <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full ${
-              index === currentIndex ? 'bg-white' : 'bg-white/50'
-            }`}
+            key={i}
+            className={`w-3 h-3 rounded-full ${i === current ? 'bg-white' : 'bg-white/40'}`}
+            aria-current={i === current}
+            aria-label={`Go to slide ${i + 1}`}
+            onClick={() => setCurrent(i)}
           />
         ))}
       </div>
-    </div>
-  );
-};
 
-export default ImageSlideshow;
+      {/* prev/next buttons */}
+      <button
+        onClick={prev}
+        type="button"
+        className="absolute inset-y-0 left-2 z-30 flex items-center justify-center px-3 rounded-full bg-white/30 hover:bg-white/50 focus:outline-none"
+        aria-label="Previous"
+      >
+        <svg className="w-6 h-6 text-gray-800" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 18l-6-6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </button>
+
+      <button
+        onClick={next}
+        type="button"
+        className="absolute inset-y-0 right-2 z-30 flex items-center justify-center px-3 rounded-full bg-white/30 hover:bg-white/50 focus:outline-none"
+        aria-label="Next"
+      >
+        <svg className="w-6 h-6 text-gray-800" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </button>
+    </div>
+  )
+}
+
+export default ImageSlideshow
