@@ -201,7 +201,7 @@ const DealerPage = () => {
 
         <section className="mb-5 max-w-xl mx-auto shadow-2xl">
           <div className="bg-gray-50 p-6 rounded-lg">
-            <h2 className="text-2xl font-bold mb-4">Send us a Message</h2>
+            <h2 className="text-2xl font-bold mb-4">Register</h2>
             <form className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
@@ -234,7 +234,7 @@ const DealerPage = () => {
                 type="submit"
                 className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
               >
-                Send Message
+                Submit
               </button>
             </form>
           </div>
