@@ -50,8 +50,9 @@ const LocationPage = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg">Phone</h3>
-                    <p className="text-gray-600">Hotline: +94 70 444 0078</p>
-                    <p className="text-gray-600">Support: +94 11 234 5679</p>
+                    <p className="text-gray-600">Hotline &nbsp;&nbsp;&nbsp;&nbsp; +94 70 444 0078</p>
+                    <p className="text-gray-600">WhatsApp +94 71 542 4000</p>
+                    <p className="text-gray-600">Fixedline&nbsp;&nbsp; +94 45 222 6546</p>
                   </div>
                 </div>
 
@@ -63,8 +64,7 @@ const LocationPage = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg">Email</h3>
-                    <p className="text-gray-600">info@sebiro.com</p>
-                    <p className="text-gray-600">support@sebiro.com</p>
+                    <p className="text-gray-600">sebirotec@gmail.com</p>
                   </div>
                 </div>
 
@@ -76,9 +76,9 @@ const LocationPage = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg">Business Hours</h3>
-                    <p className="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                    <p className="text-gray-600">Saturday: 9:00 AM - 1:00 PM</p>
-                    <p className="text-gray-600">Sunday: Closed</p>
+                    <p className="text-gray-600">Monday - Friday 6:30 AM - 6:30 PM</p>
+                    <p className="text-gray-600">Saturday - Sunday 7.00 AM - 6:00 PM</p>
+                    <p className="text-gray-600">Poya Day - Closed</p>
                   </div>
                 </div>
               </div>
@@ -130,7 +130,7 @@ const LocationPage = () => {
             <div className="h-[400px] bg-gray-100 rounded-lg overflow-hidden">
               {/* Google Maps iframe */}
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.798467112476!2d79.84878847486577!3d6.910986993101632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2596509a4c4c3%3A0x7b2f9c1f1d02c307!2sColombo%2C%20Sri%20Lanka!5e0!3m2!1sen!2sus!4v1708933049963!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2025276.756654454!2d80.9032550051705!3d7.507280493689195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3bf002ddc5a89%3A0x39ba9fa22643017e!2sSebiro%20Technologies!5e0!3m2!1sen!2slk!4v1762490841624!5m2!1sen!2slk"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -140,21 +140,6 @@ const LocationPage = () => {
               ></iframe>
             </div>
 
-            {/* Directions */}
-            {/* <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">Getting Here</h3>
-              <div className="space-y-3">
-                <p className="text-gray-600">
-                  <span className="font-semibold">By Bus:</span> Take bus routes 138, 145, or 165 to Central Bus Station.
-                </p>
-                <p className="text-gray-600">
-                  <span className="font-semibold">By Train:</span> We're a 10-minute walk from Colombo Fort Railway Station.
-                </p>
-                <p className="text-gray-600">
-                  <span className="font-semibold">Parking:</span> Free customer parking available at our premises.
-                </p>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>

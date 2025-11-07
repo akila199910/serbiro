@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import Image from 'next/image'
+import company from './company.jpg'
 
 const AboutPage = () => {
   return (
@@ -37,7 +38,7 @@ const AboutPage = () => {
             <div className="relative h-[300px] rounded-lg overflow-hidden">
               <div className="absolute inset-0 bg-gray-200 animate-pulse" />
               {/* Add your company image here */}
-              {/* <Image src="/about/company.jpg" alt="Sebiro Office" fill className="object-cover" /> */}
+              <Image src={company} alt="Sebiro Office" fill className="object-fit" />
             </div>
           </div>
         </section>
