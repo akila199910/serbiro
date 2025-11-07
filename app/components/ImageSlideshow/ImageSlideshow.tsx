@@ -2,10 +2,15 @@
 import Image, { type StaticImageData } from 'next/image'
 import React, { useEffect, useState } from 'react'
 import NoImg from '../home/inner-page-banner_07.jpg'
+import image1 from './image1.jpg'
+import image2 from './image2.jpg'
+import image3 from './image3.jpg'
+import image4 from './image4.jpg'
 
 type Slide = {
   src: StaticImageData | string
   alt?: string
+  title?: string
 }
 
 type Props = {
@@ -17,9 +22,10 @@ type Props = {
 const ImageSlideshow: React.FC<Props> = ({ images, autoPlay = true, interval = 3000 }) => {
   // fallback images if none provided
   const slides: Slide[] = images && images.length > 0 ? images : [
-    { src: NoImg, alt: 'Slide 1' },
-    { src: NoImg, alt: 'Slide 2' },
-    { src: NoImg, alt: 'Slide 3' }
+    { src: image1, alt: 'Slide 1' },
+    { src: image2, alt: 'Slide 2' },
+    { src: image3, alt: 'Slide 3' },
+    { src: image4, alt: 'Slide 3' }
   ]
 
   const [current, setCurrent] = useState(0)
@@ -37,16 +43,29 @@ const ImageSlideshow: React.FC<Props> = ({ images, autoPlay = true, interval = 3
 
   return (
     <div id="default-carousel" className="relative w-full" data-carousel="slide">
-      <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
+      <div className="relative h-60 overflow-hidden rounded-lg md:h-[600px]">
         {slides.map((s, i) => (
           <div
             key={i}
-            className={`${i === current ? 'block h-full' : 'hidden h-full'}`}
+            className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
+              i === current ? 'opacity-100 z-10' : 'opacity-0 z-0'
+            }`}
             data-carousel-item
             aria-hidden={i !== current}
           >
             <div className="relative w-full h-full">
-              <Image src={s.src} alt={s.alt || `slide ${i + 1}`} fill className="object-cover" priority={i === 0} />
+              <Image 
+                src={s.src} 
+                alt={s.alt || `slide ${i + 1}`} 
+                fill 
+                priority={i === 0}
+                className="object-cover"
+              />
+              {s.title && (
+                <div className="absolute bottom-0 left-0 right-0 p-4 bg-black/50 text-white">
+                  <h3 className="text-xl font-semibold">{s.title}</h3>
+                </div>
+              )}
             </div>
           </div>
         ))}
