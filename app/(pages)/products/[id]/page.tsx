@@ -5,6 +5,12 @@ import products from '@/app/data/product'
 import { Product, ProductCategory } from '@/app/types/product'
 import Link from 'next/link'
 
+export async function generateStaticParams() {
+  return products.map((category) => ({
+    id: category.id.toString(),
+  }));
+}
+
 const ProductsPage = ({
   params
 }: {
